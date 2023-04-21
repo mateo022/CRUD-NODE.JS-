@@ -1,0 +1,26 @@
+{
+  "name": "Parcial_1",
+  "version": "1.0.0",
+  "description": "Express-App",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest",
+    "start": "node app.js",
+    "debug": "npx nodemon app.js"
+  },
+  "keywords": [
+    "express",
+    "ejs"
+  ],
+  "author": "Mateo Ceballos",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "postgres": "^3.3.4"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
