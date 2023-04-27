@@ -1,8 +1,18 @@
 const express = require('express')
 const sql = require('../../db')
 const fridgesjson = require ('../../fridgesJson')
-
 const fridgesRouter = express.Router()
+
+fridgesRouter.use((req,res, next)=>{
+    if(req.user){
+        next()
+    }
+    else {
+        res.redirect('/auth/signIn')
+    }
+})
+
+
 
 async function store ( fridge){
     const response = await sql `
