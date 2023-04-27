@@ -19,6 +19,11 @@ app.set('view engine','ejs')
 app.use(express.urlencoded({extended:false}))
 app.use(express.json())
 
+app.use(require('cookie-parser')());
+app.use(require('express-session')({ secret: 'ingenieria informatica Developt'}));
+
+require('./src/config/passport')(app)
+
 //Importamos el archivo de rutas
 app.use('/fridges', fridgesRouter)
 app.use('/auth', authRouter)
