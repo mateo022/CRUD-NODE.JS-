@@ -4,6 +4,7 @@ require('dotenv').config()
 
 const express = require('express')
 const fridgesRouter = require('./src/routers/fridgesRouter')
+const authRouter = require('./src/routers/authRouter')
 
 const app = express()
 
@@ -20,6 +21,7 @@ app.use(express.json())
 
 //Importamos el archivo de rutas
 app.use('/fridges', fridgesRouter)
+app.use('/auth', authRouter)
 
 //Traemos el archivo port 
 
